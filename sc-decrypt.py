@@ -53,7 +53,7 @@ def process_file(path):
 
 def process_dir(path):
     for filename in glob.iglob(path + '/**/*.sc', recursive=True):
-        if "decoded.sc" in filename:
+        if "decompressed.sc" in filename:
             continue
         process_file(filename)
 
