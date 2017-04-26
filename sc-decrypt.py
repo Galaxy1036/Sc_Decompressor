@@ -36,16 +36,16 @@ def process_file(path):
             
     except:
 
-    	for i in range(0,8):
-    		tempdata2.append(data[i])
+        for i in range(0,8):
+            tempdata2.append(data[i])
 
-    	for i in range(0,4):
-    		tempdata2.append(0)
+        for i in range(0,4):
+            tempdata2.append(0)
 
-    	for i in range(8,len(data)):
-    	    tempdata2.append(data[i])
+        for i in range(8,len(data)):
+            tempdata2.append(data[i])
 
-    	with open(decodedname, 'wb') as f:
+        with open(decodedname, 'wb') as f:
             unpack_data2 = lzma.decompress(tempdata2)
             f.write(unpack_data2)
         print("[+] Decompressed using old format")
